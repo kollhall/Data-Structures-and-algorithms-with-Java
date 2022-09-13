@@ -15,6 +15,13 @@ public class Pilha<T> {
         }
         return this.objetos.removeLast();
     }
+    
+    public T olha() {
+        if (this.vazia()) {
+            throw new IllegalArgumentException("Pilha está vazia!");
+        }
+        return this.objetos.getLast();
+    }
 
     public boolean vazia() {
         return this.objetos.size() == 0;
