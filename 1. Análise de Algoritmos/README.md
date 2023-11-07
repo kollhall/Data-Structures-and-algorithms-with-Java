@@ -5,7 +5,7 @@
 ```Java
 BuscaLinear(Lista, Valor)
 1 i = 1
-2 Enquanto i <= n Faça
+2 Enquanto i <= Lista.tamanho Faça
 3    Se Lista[i] == Valor
 4        Retorna i
 5    i = i + 1   
@@ -16,9 +16,10 @@ BuscaLinear(Lista, Valor)
     <br>
     Na 1º linha uma execução T. A 2º linha o laço terá no máximo T * (n + 1) execuções, visto que, caso o elemento não esteja no vetor a comparação ocorrerá mais uma vez dando falso e retornando -1. A 3º linha terá 2Tn, visto que estou acessando o elemento da lista e comparando com o valor passado. A 4º linha nunca será executada. A 5º linha terá 2Tn execuções. E a linha 6º será executada uma única vez T. Portanto, somando o tempo de execução de todas as linhas teremos:
 
-    $$T(n) = T + T * (n + 1) + 2Tn + 2Tn + T$$
-    $$T(n) = 5Tn + 3T$$
+    T(n) = T + T (n + 1) + 2Tn + 2Tn + T
+    T(n) = 5Tn + 3T
 </p>
+
 
 <p style="text-align: justify">
     Com essa função podemos substituir n pelo tamanho da entrada, então teremos uma função que representa a execução do algoritmo. Também podemos encontrar o melhor e pior caso do mesmo.
